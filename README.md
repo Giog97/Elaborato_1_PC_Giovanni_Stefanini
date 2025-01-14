@@ -64,5 +64,5 @@ Le immagini saranno salvate in:
 Esempio di segmentazione "prima e dopo":   
 | **Input Originale** | **Segmentazione Sequenziale** | **Segmentazione Parallela** |  
 |---------------------|------------------------------|------------------------------|  
-| ![Original](./img/example_original.jpg) | ![Sequential](./img_results/example_sequential.jpg) | ![Parallel](./cmake-build-debug/img_results/parallel_segmented_image_1.jpg) |  
+| ![Original](./cmake-build-debug/img_results/resized_image_1.jpg) | ![Sequential](./cmake-build-debug/img_results/sequential_segmented_image_1.jpg) | ![Parallel](./cmake-build-debug/img_results/parallel_segmented_image_1.jpg) |  
 
