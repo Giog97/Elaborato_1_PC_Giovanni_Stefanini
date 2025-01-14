@@ -60,11 +60,6 @@ Le immagini saranno salvate in:
 
 ---
 
-## 📜 **Licenza**
-📝 Questo progetto è rilasciato sotto licenza **MIT**. Consulta il file `LICENSE` per i dettagli.  
-
----
-
 ### 👀 **Demo Visiva** (Facoltativo)
 Esempio di segmentazione "prima e dopo":   
 | **Input Originale** | **Segmentazione Sequenziale** | **Segmentazione Parallela** |  
