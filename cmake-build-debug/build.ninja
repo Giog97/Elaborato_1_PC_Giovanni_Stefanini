@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini: phony ||
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj.ddi: CXX_SCAN__Elaborato_1_Giovanni_Stefanini_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/main.cpp || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\main.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\main.cpp.obj.ddi
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJ_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\main.cpp.obj
   PREPROCESSED_OUTPUT_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\main.cpp.obj.ddi.i
@@ -60,7 +60,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj.ddi: CXX_SCAN__
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj: CXX_COMPILER__Elaborato_1_Giovanni_Stefanini_scanned_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/main.cpp | CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj.modmap || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXX.dd
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\main.cpp.obj.d
   DYNDEP_MODULE_MAP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\main.cpp.obj.modmap
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJECT_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
   OBJECT_FILE_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
@@ -69,7 +69,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj: CXX_COMPILER__
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj.ddi: CXX_SCAN__Elaborato_1_Giovanni_Stefanini_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/MeanShiftParallel.cpp || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftParallel.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftParallel.cpp.obj.ddi
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJ_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftParallel.cpp.obj
   PREPROCESSED_OUTPUT_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftParallel.cpp.obj.ddi.i
@@ -77,7 +77,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj.dd
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj: CXX_COMPILER__Elaborato_1_Giovanni_Stefanini_scanned_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/MeanShiftParallel.cpp | CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj.modmap || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXX.dd
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftParallel.cpp.obj.d
   DYNDEP_MODULE_MAP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftParallel.cpp.obj.modmap
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJECT_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
   OBJECT_FILE_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
@@ -86,7 +86,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj: C
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj.ddi: CXX_SCAN__Elaborato_1_Giovanni_Stefanini_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/MeanShiftSeq.cpp || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftSeq.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftSeq.cpp.obj.ddi
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJ_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftSeq.cpp.obj
   PREPROCESSED_OUTPUT_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftSeq.cpp.obj.ddi.i
@@ -94,7 +94,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj.ddi: CX
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj: CXX_COMPILER__Elaborato_1_Giovanni_Stefanini_scanned_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/MeanShiftSeq.cpp | CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj.modmap || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXX.dd
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftSeq.cpp.obj.d
   DYNDEP_MODULE_MAP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\MeanShiftSeq.cpp.obj.modmap
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJECT_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
   OBJECT_FILE_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
@@ -103,7 +103,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj: CXX_CO
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj.ddi: CXX_SCAN__Elaborato_1_Giovanni_Stefanini_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/Utils.cpp || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\Utils.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\Utils.cpp.obj.ddi
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJ_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\Utils.cpp.obj
   PREPROCESSED_OUTPUT_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\Utils.cpp.obj.ddi.i
@@ -111,7 +111,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj.ddi: CXX_SCAN_
 build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj: CXX_COMPILER__Elaborato_1_Giovanni_Stefanini_scanned_Debug C$:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/Utils.cpp | CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj.modmap || cmake_object_order_depends_target_Elaborato_1_Giovanni_Stefanini CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXX.dd
   DEP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\Utils.cpp.obj.d
   DYNDEP_MODULE_MAP_FILE = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir\Utils.cpp.obj.modmap
-  FLAGS = -fopenmp -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/opencv-build/install/include
   OBJECT_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
   OBJECT_FILE_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
@@ -128,7 +128,7 @@ build CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXX.dd | C$:/Users/giost/CLi
 # Link the executable Elaborato_1_Giovanni_Stefanini.exe
 
 build Elaborato_1_Giovanni_Stefanini.exe: CXX_EXECUTABLE_LINKER__Elaborato_1_Giovanni_Stefanini_Debug CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj | C$:/opencv-build/install/x64/mingw/lib/libopencv_gapi4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_highgui4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_ml4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_objdetect4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_photo4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_stitching4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_video4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_videoio4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_imgcodecs4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_dnn4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_calib3d4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_features2d4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_flann4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_imgproc4120.dll.a C$:/opencv-build/install/x64/mingw/lib/libopencv_core4120.dll.a
-  FLAGS = -fopenmp -g
+  FLAGS = -fopenmp -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt -g
   LINK_LIBRARIES = C:/opencv-build/install/x64/mingw/lib/libopencv_gapi4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_highgui4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_ml4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_objdetect4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_photo4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_stitching4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_video4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_videoio4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_imgcodecs4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_dnn4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_calib3d4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_features2d4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_flann4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_imgproc4120.dll.a  C:/opencv-build/install/x64/mingw/lib/libopencv_core4120.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Elaborato_1_Giovanni_Stefanini.dir
   POST_BUILD = cd .

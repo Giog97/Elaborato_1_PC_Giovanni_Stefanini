@@ -4,6 +4,7 @@
 
 #include "Utils.h"
 
+//#pragma omp simd //direttiva aggiunta per vettorizzare
 // Funzione per calcolare la distanza euclidea al quadrato sui canali RGB
 float squaredDistance(const cv::Vec3f& p1, const cv::Vec3f& p2) {
     float dist = 0.0f;

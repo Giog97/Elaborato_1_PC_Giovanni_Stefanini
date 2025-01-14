@@ -15,13 +15,14 @@ int main() {
     float bandwidth = 32.0f; // Ampiezza della finestra di ricerca
     float epsilon = 1.0f;    // Tolleranza per la convergenza
 
-    int resize_factor = 4; // indica di che fattore scaleremo le immagini. 1:512x512, 2: 256x256, 4:128x128, 8:64x64
+    int resize_factor = 4; // indica di che fattore scaleremo le immagini. 1:512x512, 2: 256x256, 4:128x128, 8:64x64 //ottimale è 4
     std::string imageDirectory = "./img"; // Specifica la directory delle immagini
     std::string outputDirectory = "./img_results"; // Directory per le immagini segmentate
 
     int maxThreads = omp_get_max_threads(); // Numero massimo di thread disponibili (uso OpenMP)
     std::cout << "Thread disponibili: " << maxThreads << std::endl;
 
+    //ToDo aggiungere la scelta del numero di Threads da usare
     omp_set_num_threads(maxThreads); // Usa tutti i threads disponibili (set del numero di threads disponibili)
 
     // Verifica che la directory esista
@@ -87,6 +88,7 @@ int main() {
     auto end_par = std::chrono::high_resolution_clock::now();    // fine timer parallelo
     std::chrono::duration<double> elapsed_par = end_par - start_par;                 // calcolo tempo parallelo
     std::cout << "Tempo di esecuzione (parallelo): " << elapsed_par.count() << " secondi." << std::endl;
+    //ToDO aggiungere il numero di threads usati come output
 
 
     // Mostra il risultato

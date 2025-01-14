@@ -8,6 +8,8 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
+// NB std::vector<Vec3f> data; è un Array di strutture (AoS) fornito da openCV
+
 // Funzione per calcolare la distanza euclidea al quadrato sui canali RGB
 float squaredDistance(const cv::Vec3f& p1, const cv::Vec3f& p2);
 

@@ -6,6 +6,8 @@
 #include <cmath>
 #include "Utils.h"
 
+// NB std::vector<Vec3f> data; è un Array di strutture (AoS) fornito da openCV
+
 // Implementazione del Mean Shift Clustering Sequenziale
 void meanShift_seq(const std::vector<cv::Vec3f>& data, std::vector<cv::Vec3f>& modes, float bandwidth, float epsilon) {
     modes = data;
