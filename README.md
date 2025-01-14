@@ -61,7 +61,7 @@ Le immagini saranno salvate in:
 ---
 
 ### 👀 **Demo Visiva**
-Esempio di segmentazione "prima e dopo":   
+Segmentazione tramite MeanShift per le immagini di esempio già presenti nel progetto:   
 | **Input Originale** | **Segm. Sequenziale** | **Segm. Parallela** |  
 |---------------------|------------------------------|------------------------------|  
 | ![Original](./cmake-build-debug/img_results/resized_image_1.jpg) | ![Sequential](./cmake-build-debug/img_results/sequential_segmented_image_1.jpg) | ![Parallel](./cmake-build-debug/img_results/parallel_segmented_image_1.jpg) |  
