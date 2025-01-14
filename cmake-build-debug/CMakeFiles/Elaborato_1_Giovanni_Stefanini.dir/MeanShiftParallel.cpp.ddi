@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}
