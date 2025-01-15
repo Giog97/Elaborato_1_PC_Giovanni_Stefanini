@@ -19,12 +19,6 @@ int main() {
     std::string imageDirectory = "./img"; // Specifica la directory delle immagini
     std::string outputDirectory = "./img_results"; // Directory per le immagini segmentate
 
-    int maxThreads = omp_get_max_threads(); // Numero massimo di thread disponibili (uso OpenMP)
-    std::cout << "Thread disponibili: " << maxThreads << std::endl;
-
-    //ToDo aggiungere la scelta del numero di Threads da usare
-    omp_set_num_threads(maxThreads); // Usa tutti i threads disponibili (set del numero di threads disponibili, uso OpenMP)
-
     // Verifica che la directory esista
     if (!fs::exists(imageDirectory) || !fs::is_directory(imageDirectory)) {
         std::cerr << "Errore: La directory " << imageDirectory << " non esiste o non è una directory!" << std::endl;
@@ -75,39 +69,75 @@ int main() {
     cv::Mat resizedImage;
     cv::resize(image, resizedImage, cv::Size(image.cols / resize_factor, image.rows / resize_factor)); // Riduce l'immagine 512x512:Z dove Z è il fattore di ridimensionamento
 
-    // Esegui Mean Shift sequenziale
-    auto start_seq = std::chrono::high_resolution_clock::now(); // inizio timer sequenziale
-    cv::Mat segmented_seq = segmentImage_seq(resizedImage, bandwidth, epsilon);     // esecuzione segmentazione con MeanShift sequenziale
-    auto end_seq = std::chrono::high_resolution_clock::now();   // fine timer sequenziale
-    std::chrono::duration<double> elapsed_seq = end_seq - start_seq;                // calcolo tempo sequenziale
-    std::cout << "Tempo di esecuzione (sequenziale): " << elapsed_seq.count() << " secondi." << std::endl;
+     // Chiedi all'utente quale versione di MeanShift utilizzare
+    int methodChoice = 0;
+    do {
+        std::cout << "Scegli la versione di MeanShift:\n";
+        std::cout << "1: Sequenziale\n";
+        std::cout << "2: Parallelo\n";
+        std::cin >> methodChoice;
 
-    // Esegui Mean Shift parallelo
-    auto start_par = std::chrono::high_resolution_clock::now();  // inizio timer parallelo
-    cv::Mat segmented_par = segmentImage_parallel(resizedImage, bandwidth, epsilon); // esecuzione segmentazione con MeanShift parallelo
-    auto end_par = std::chrono::high_resolution_clock::now();    // fine timer parallelo
-    std::chrono::duration<double> elapsed_par = end_par - start_par;                 // calcolo tempo parallelo
-    std::cout << "Tempo di esecuzione (parallelo): " << elapsed_par.count() << " secondi." << std::endl;
-    //ToDO aggiungere il numero di threads usati come output
+        if (methodChoice != 1 && methodChoice != 2) {
+            std::cerr << "Scelta non valida. Inserisci 1 (Sequenziale) o 2 (Parallelo).\n";
+        }
+    } while (methodChoice != 1 && methodChoice != 2);
 
+    // Se l'utente sceglie la versione parallela, chiedi il numero di thread
+    int numThreads = 0;
+    if (methodChoice == 2) {
+        int maxThreads = omp_get_max_threads(); // Numero massimo di thread disponibili (uso OpenMP)
+        std::cout << "Thread disponibili: " << maxThreads << std::endl;
 
-    // Mostra il risultato
-    //cv::imshow("Original Image", resizedImage);  // Mostra l'immagine ridimensionata
-    //cv::imshow("Segmented Image", segmented); // Mostra immagine segmentata
-    //cv::waitKey(0);
+        do {
+            std::cout << "Inserisci il numero di thread da utilizzare (1-" << maxThreads << "): ";
+            std::cin >> numThreads;
+            if (numThreads < 1 || numThreads > maxThreads) {
+                std::cerr << "Numero di thread non valido. Inserisci un valore tra 1 e " << maxThreads << ".\n";
+            }
+        } while (numThreads < 1 || numThreads > maxThreads);
+
+        omp_set_num_threads(numThreads); // Imposta il numero di thread scelto dall'utente (uso OpenMP)
+    }
+
+    // Esegui il metodo scelto
+    if (methodChoice == 1) {
+        // Esegue MeanShift Sequenziale
+        auto start_seq = std::chrono::high_resolution_clock::now(); // inizio timer sequenziale
+        cv::Mat segmented_seq = segmentImage_seq(resizedImage, bandwidth, epsilon);     // esecuzione segmentazione con MeanShift sequenziale
+        auto end_seq = std::chrono::high_resolution_clock::now();   // fine timer sequenziale
+        std::chrono::duration<double> elapsed_seq = end_seq - start_seq;                // calcolo tempo sequenziale
+
+        std::cout << "Tempo di esecuzione (sequenziale): " << elapsed_seq.count() << " secondi.\n";
+
+        // Salva il risultato
+        std::string outputFileName_segmented_seq =
+            outputDirectory + "/sequential_segmented_image_" + std::to_string(choice) + ".jpg"; // Crea il nome del file di output // prende la directory (in modo che stia nella cartella img_results + il 'segemnted' + il numero della scelta)
+        cv::imwrite(outputFileName_segmented_seq, segmented_seq);
+    } else if (methodChoice == 2) {
+        // Esegue MeanShift Parallelo
+        auto start_par = std::chrono::high_resolution_clock::now();  // inizio timer parallelo
+        cv::Mat segmented_par = segmentImage_parallel(resizedImage, bandwidth, epsilon); // esecuzione segmentazione con MeanShift parallelo
+        auto end_par = std::chrono::high_resolution_clock::now();    // fine timer parallelo
+        std::chrono::duration<double> elapsed_par = end_par - start_par;                 // calcolo tempo parallelo
+
+        std::cout << "Tempo di esecuzione (parallelo): " << elapsed_par.count()
+                  << " secondi. Thread utilizzati: " << numThreads << ".\n";
+
+        // Salva il risultato
+        std::string outputFileName_segmented_par =
+            outputDirectory + "/parallel_segmented_image_" + std::to_string(choice) + ".jpg"; // Crea il nome del file di output
+        cv::imwrite(outputFileName_segmented_par, segmented_par);
+    }
 
     // Crea il nome del file di output
-    std::string outputFileName_segmented_seq = outputDirectory + "/sequential_segmented_image_" + std::to_string(choice) + ".jpg"; // prende la directory (in modo che stia nella cartella img_results + il 'segemnted' + il numero della scelta)
-    std::string outputFileName_segmented_par = outputDirectory + "/parallel_segmented_image_" + std::to_string(choice) + ".jpg";
-    std::string outputFileName_resized = outputDirectory + "/resized_image_" + std::to_string(choice) + ".jpg";
+    std::string outputFileName_resized = outputDirectory + "/resized_image_" + std::to_string(choice) + ".jpg"; // prende la directory (in modo che stia nella cartella img_results + il 'segemnted' + il numero della scelta)
 
     // Salva immagini risultanti nella cartella img_results
-    cv::imwrite(outputFileName_segmented_seq, segmented_seq); // Salva l'immagine segmentata seq nella directory e con il nome desiderato
-    cv::imwrite(outputFileName_segmented_par, segmented_seq); // Salva l'immagine segmentata par nella directory e con il nome desiderato
     cv::imwrite(outputFileName_resized, resizedImage); // Salva l'immagine ridimensionata
 
     return 0;
 }
+
 
 
 
