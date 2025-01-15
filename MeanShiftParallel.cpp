@@ -31,11 +31,22 @@ SoAData convertToSoA(const cv::Mat& image) {
 
 // Implementazione parallela di Mean Shift (lavora con SoA)
 void meanShift_parallel(const SoAData& data, SoAData& modes, float bandwidth, float epsilon) {
-    modes = data; // Copia iniziale dei dati
+    modes.r.resize(data.r.size()); // Assicura che modes abbia la stessa dimensione di data prima dell'inizializzazione
+    modes.g.resize(data.g.size());
+    modes.b.resize(data.b.size());
+
+    // First Touch: inizializza modes per ogni thread (copia manuale in un ciclo parallelo per rispettare il First Touch)
+    #pragma omp parallel for
+    for (size_t i = 0; i < data.r.size(); ++i) {
+        modes.r[i] = data.r[i];
+        modes.g[i] = data.g[i];
+        modes.b[i] = data.b[i];
+    }
+
     const float bandwidthSquared = bandwidth * bandwidth;
 
     // Parallelizza il ciclo principale
-    #pragma omp parallel for
+    #pragma omp parallel for // divide i cicli per i threads del team, ovvero parallelizza con OpenMP
     for (size_t i = 0; i < modes.r.size(); ++i) {
         float pointR = modes.r[i], pointG = modes.g[i], pointB = modes.b[i];
         float shiftR, shiftG, shiftB;
@@ -44,7 +55,7 @@ void meanShift_parallel(const SoAData& data, SoAData& modes, float bandwidth, fl
             shiftR = 0.0f; shiftG = 0.0f; shiftB = 0.0f;
             float totalWeight = 0.0f;
 
-            // Ciclo interno per calcolare il contributo di ogni punto
+            // Ciclo interno per calcolare il contributo di ogni punto (provato a parallelizzare e vettorizzazione esplicita, ma rallentano le prestazioni)
             for (size_t j = 0; j < data.r.size(); ++j) {
                 float distSquared =
                     (pointR - data.r[j]) * (pointR - data.r[j]) +

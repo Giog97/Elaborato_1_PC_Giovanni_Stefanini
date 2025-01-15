@@ -23,7 +23,7 @@ int main() {
     std::cout << "Thread disponibili: " << maxThreads << std::endl;
 
     //ToDo aggiungere la scelta del numero di Threads da usare
-    omp_set_num_threads(maxThreads); // Usa tutti i threads disponibili (set del numero di threads disponibili)
+    omp_set_num_threads(maxThreads); // Usa tutti i threads disponibili (set del numero di threads disponibili, uso OpenMP)
 
     // Verifica che la directory esista
     if (!fs::exists(imageDirectory) || !fs::is_directory(imageDirectory)) {

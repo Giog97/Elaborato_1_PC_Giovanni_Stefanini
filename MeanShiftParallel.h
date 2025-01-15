@@ -8,9 +8,6 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
-// Funzione per calcolare la distanza euclidea al quadrato sui canali RGB
-float squaredDistance(const cv::Vec3f& p1, const cv::Vec3f& p2);
-
 // NB la seguente struttura dati è una Structure of Arrays (SoA)
 struct SoAData {
     std::vector<float> r, g, b; // Componenti dei colori

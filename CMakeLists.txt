@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Percorso di installazione di OpenCV
 set(OpenCV_DIR "C:/opencv-build/install") # Percorso di OpenCV
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp") # Serve per usare OpenMP
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp") # (-fopenmp) Serve per usare OpenMP
 
 # Attivazione Auto-Vectorization (-ftree-vectorize) + Attivazione report vettorizzazione (-fopt-info-vec-optimized=vectorization.txt)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -march=native -fopenmp -ftree-vectorize -fopt-info-vec-optimized=vectorization.txt")  #abilita la vettorizzazione creando un file di txt contenente il report di vettorizzazione

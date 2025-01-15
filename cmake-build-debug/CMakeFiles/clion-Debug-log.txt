@@ -4,6 +4,6 @@
 -- OpenCV STATIC: OFF
 -- Found OpenCV 4.12.0 in C:/opencv-build/install/x64/mingw/lib
 -- You might need to add C:\opencv-build\install\x64\mingw\bin to your PATH to be able to run your applications.
--- Configuring done (0.4s)
+-- Configuring done (0.8s)
 -- Generating done (0.1s)
 -- Build files have been written to: C:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/cmake-build-debug
