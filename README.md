@@ -39,15 +39,7 @@
 
 ---
 
-## 🖼️ **Esempio di Output**
-### 📊 **Performance:**
-```
-Thread disponibili: 8
-Tempo di esecuzione (sequenziale): 12.34 secondi.
-Tempo di esecuzione (parallelo): 3.45 secondi.
-```
-
-### 🗂️ **Immagini Risultanti:**
+## 🗂️ **Immagini Risultanti:**
 Le immagini saranno salvate in:  
 - **`./img_results/sequential_segmented_image_X.jpg`**  
 - **`./img_results/parallel_segmented_image_X.jpg`**  
