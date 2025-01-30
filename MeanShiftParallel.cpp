@@ -57,6 +57,7 @@ void meanShift_parallel(const SoAData& data, SoAData& modes, float bandwidth, fl
                 float localShiftR = 0.0f, localShiftG = 0.0f, localShiftB = 0.0f, localTotalWeight = 0.0f;
 
                 // Ciclo interno per calcolare il contributo di ogni punto (provato a parallelizzare e vettorizzazione esplicita, ma rallentano le prestazioni)
+                // Non è parallelizzabile
                 for (size_t j = 0; j < data.r.size(); ++j) {
                     float distSquared =
                         (pointR - data.r[j]) * (pointR - data.r[j]) +
