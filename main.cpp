@@ -65,6 +65,29 @@ int main() {
         return -1;
     }
 
+    // Chiedi all'utente quale risoluzione dell'immagine utilizzare
+    int resolutionChoice = 0;
+    do {
+        std::cout << "Scegli la risoluzione dell'immagine:\n";
+        std::cout << "1: 512x512\n";
+        std::cout << "2: 256x256\n";
+        std::cout << "3: 128x128\n";
+        std::cout << "4:  64x64\n";
+        std::cin >> resolutionChoice;
+
+        if (resolutionChoice < 1 || resolutionChoice > 4) {
+            std::cerr << "Scelta non valida. Inserisci un valore tra 1 e 4.\n";
+        }
+    } while (resolutionChoice < 1 || resolutionChoice > 4);
+
+    // Imposta il resize_factor in base alla scelta dell'utente
+    switch (resolutionChoice) {
+    case 1: resize_factor = 1; break;  // 512x512
+    case 2: resize_factor = 2; break;  // 256x256
+    case 3: resize_factor = 4; break;  // 128x128
+    case 4: resize_factor = 8; break;  //  64x64
+    }
+
     // Riduci la risoluzione dell'immagine (ad esempio, a metà dimensione)
     cv::Mat resizedImage;
     cv::resize(image, resizedImage, cv::Size(image.cols / resize_factor, image.rows / resize_factor)); // Riduce l'immagine 512x512:Z dove Z è il fattore di ridimensionamento
@@ -137,7 +160,5 @@ int main() {
 
     return 0;
 }
-
-
 
 
