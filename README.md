@@ -47,6 +47,11 @@ Le immagini saranno salvate in:
 
 ---
 
+## 📄 **Report**
+Una copia del report (italiano) può essere trovata [qui📄](./report/Parallel_Computing_First_Course_Project_Giovanni_Stefanini.pdf).
+
+---
+
 ## 🎉 **Contributi**
 💡 Questo progetto è stato realizzato da **Giovanni Stefanini**, per il superamento dell'esame di Parallel Computing.  
 
