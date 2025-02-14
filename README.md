@@ -24,11 +24,11 @@
 
 ## ⚙️ **Utilizzo**
 1. **Aggiungi immagini** nella directory `./img`. Alcune immagini di esempio 512x512 sono già presenti all'interno del progetto
-2. **Esegui il programma**
-3. **Seleziona un'immagine** dalla lista visualizzata nel terminale (immagini presenti nella directory `./img`).
-4. Guarda i risultati nella directory `./img_results` e confronta i tempi di esecuzione dei due algoritmi 
+2. **Scegli la versione da usare** ed **Esegui il programma**
+3. **Seleziona un'immagine** dalla lista visualizzata nel terminale (immagini presenti nella directory `./img`)  e **scegli quale versione di Mean Shift** da usare.
+4. Guarda i risultati nella directory `./img_results` e controlla il tempo di esecuzione della versione scelta.
 
-💡 *Il programma mostrerà i tempi di esecuzione per entrambe le implementazioni!*  
+💡 *Il programma mostrerà i tempi di esecuzione per l'implementazione scelta!*  
 
 ---
 
