@@ -1,66 +1,70 @@
-# 🎨 **Mean Shift Image Segmentation**  
-🚀 *Confronto tra implementazioni **sequenziale** e **parallela***  
+# 🎨 **Mean Shift Image Segmentation**
+🚀 *Comparison between **sequential** and **parallel** implementations*
 
-> Questo progetto esplora il clustering **Mean Shift** per la segmentazione di immagini, confrontando una versione **sequenziale** e una **parallela** ottimizzata con **OpenMP**.  
+> This project explores the **Mean Shift** clustering for image segmentation, comparing a **sequential** version with a **parallel** one optimized with **OpenMP**.
 
----
+---  
 
-## 🛠️ **Caratteristiche**
-- ✂️ **Segmentazione immagini** tramite **Mean Shift**.
-- ⏱️ **Confronto delle performance** tra versioni sequenziale e parallela.
-- 📁 Supporto per file immagine `.jpg`, `.png` e `.bmp`.
-- 💾 Salvataggio dei risultati in una cartella dedicata.
+## 🛠️ **Features**
+- ✂️ **Image segmentation** using **Mean Shift**.
+- ⏱️ **Performance comparison** between sequential and parallel versions.
+- 📁 Support for `.jpg`, `.png`, and `.bmp` image files.
+- 💾 Saves results in a dedicated folder.
 
----
+---  
 
-## 🖥️ **Linguaggi e librerie usati**
+## 🖥️ **Languages and Libraries Used**
 ✅ **C++**  
-✅ **OpenCV** (per l'elaborazione delle immagini).  
-✅ **OpenMP** (per la parallelizzazione).  
-✅ **MinGW** (per compilare).  
-✅ **CMake** (per build multi-piattaforma).  
+✅ **OpenCV** (for image processing).  
+✅ **OpenMP** (for parallelization).  
+✅ **MinGW** (for compilation).  
+✅ **CMake** (for cross-platform builds).
 
----
+---  
 
-## ⚙️ **Utilizzo**
-1. **Aggiungi immagini** nella directory `./img`. Alcune immagini di esempio 512x512 sono già presenti all'interno del progetto
-2. **Scegli la versione da usare** ed **Esegui il programma**
-3. **Seleziona un'immagine** dalla lista visualizzata nel terminale (immagini presenti nella directory `./img`)  e **scegli quale versione di Mean Shift** da usare.
-4. Guarda i risultati nella directory `./img_results` e controlla il tempo di esecuzione della versione scelta.
+## ⚙️ **Usage**
+1. **Add images** to the `./img` directory. Some sample 512x512 images are already included in the project.
+2. **Choose the version to use** and **run the program**.
+3. **Select an image** from the list displayed in the terminal (images in the `./img` directory) and **choose which Mean Shift version** to use.
+4. Check the results in the `./img_results` directory and compare the execution time of the chosen version.
 
-💡 *Il programma mostrerà i tempi di esecuzione per l'implementazione scelta!*  
+💡 *The program will display execution times for the selected implementation!*
 
----
+---  
 
-## 🔧 **Parametri Personalizzabili**
-- 📏 **Bandwidth**: Ampiezza della finestra di ricerca (*più grande = segmentazione meno dettagliata*).  
-- 🎯 **Epsilon**: Soglia di convergenza (*più piccolo = risultati più precisi, ma più lenti*).  
-- 🔍 **Resize Factor**: Ridimensiona l'immagine per test più veloci (1 = no scaling).  
+## 🔧 **Customizable Parameters**
+- 📏 **Bandwidth**: The search window size (*larger = less detailed segmentation*).
+- 🎯 **Epsilon**: Convergence threshold (*smaller = more precise results, but slower*).
+- 🔍 **Resize Factor**: Rescales the image for faster testing (1 = no scaling).
 
----
+---  
 
-## 🗂️ **Immagini Risultanti:**
-Le immagini saranno salvate in:  
-- **`./img_results/sequential_segmented_image_X.jpg`**  
-- **`./img_results/parallel_segmented_image_X.jpg`**  
+## 🗂️ **Resulting Images**
+Images will be saved in:
+- **`./img_results/sequential_segmented_image_X.jpg`**
+- **`./img_results/parallel_segmented_image_X.jpg`**
 - **`./img_results/resized_image_X.jpg`**
 
----
+---  
 
 ## 📄 **Report**
-Una copia del report (italiano) può essere trovata [qui📄](./report/Parallel_Computing_First_Course_Project_Giovanni_Stefanini.pdf).
+A copy of the report (in Italian) can be found [here📄](./report/Parallel_Computing_First_Course_Project_Giovanni_Stefanini.pdf).
 
----
+A copy of the presentation can be found [here📄](./report/Parallel_Computing_Second_Course_Project_Giovanni_Stefanini.pdf).
 
-## 🎉 **Contributi**
-💡 Questo progetto è stato realizzato da **Giovanni Stefanini**, per il superamento dell'esame di Parallel Computing.  
+---  
 
----
+## 🎉 **Contributions**
+💡 This project was developed by **Giovanni Stefanini** as part of the Parallel Computing course.
 
-### 👀 **Demo Visiva**
-Segmentazione tramite MeanShift per le immagini di esempio già presenti nel progetto:   
-| **Input Originale** | **Segm. Sequenziale** | **Segm. Parallela** |  
+---  
+
+### 👀 **Visual Demo**
+Mean Shift segmentation applied to the sample images included in the project:
+
+| **Original Input** | **Sequential Segmentation** | **Parallel Segmentation** |  
 |---------------------|------------------------------|------------------------------|  
 | ![Original](./cmake-build-debug/img_results/resized_image_1.jpg) | ![Sequential](./cmake-build-debug/img_results/sequential_segmented_image_1.jpg) | ![Parallel](./cmake-build-debug/img_results/parallel_segmented_image_1.jpg) |  
 | ![Original](./cmake-build-debug/img_results/resized_image_2.jpg) | ![Sequential](./cmake-build-debug/img_results/sequential_segmented_image_2.jpg) | ![Parallel](./cmake-build-debug/img_results/parallel_segmented_image_2.jpg) |  
 | ![Original](./cmake-build-debug/img_results/resized_image_3.jpg) | ![Sequential](./cmake-build-debug/img_results/sequential_segmented_image_3.jpg) | ![Parallel](./cmake-build-debug/img_results/parallel_segmented_image_3.jpg) |  
+
