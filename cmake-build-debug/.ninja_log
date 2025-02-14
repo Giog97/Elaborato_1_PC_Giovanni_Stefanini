@@ -67,3 +67,12 @@
 1675	1805	7598708555257950	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj.modmap	1c84c49318fdd21f
 1808	7848	7598708556589233	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj	848980696b6a6f69
 7850	8348	7598708616999221	Elaborato_1_Giovanni_Stefanini.exe	63736221020476ed
+55	1654	7599648497562627	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj.ddi	84dffd512acf89d3
+1655	1811	7599648513556129	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXX.dd	1c84c49318fdd21f
+1655	1811	7599648513556129	C:/Users/giost/CLionProjects/Elaborato_1_Giovanni_Stefanini/cmake-build-debug/CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/CXXModules.json	1c84c49318fdd21f
+1655	1811	7599648513556129	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/main.cpp.obj.modmap	1c84c49318fdd21f
+1655	1811	7599648513556129	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj.modmap	1c84c49318fdd21f
+1655	1811	7599648513556129	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftSeq.cpp.obj.modmap	1c84c49318fdd21f
+1655	1811	7599648513556129	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/Utils.cpp.obj.modmap	1c84c49318fdd21f
+1815	7166	7599648515158288	CMakeFiles/Elaborato_1_Giovanni_Stefanini.dir/MeanShiftParallel.cpp.obj	ee749990b623def3
+7167	7694	7599648568672936	Elaborato_1_Giovanni_Stefanini.exe	63736221020476ed
